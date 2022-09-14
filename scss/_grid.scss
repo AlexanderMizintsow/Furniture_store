@@ -1,0 +1,41 @@
+// body grid
+.body__grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+}
+
+
+
+// main__banner
+.main__grid {
+    display: grid;
+    grid-template-columns: 25.8rem 3fr;
+    grid-template-rows: 6.7rem 1fr;
+    grid-template-areas:
+        "collection  grid-nav"
+        "collection grid-banner";
+    grid-gap: 1.2rem;
+    margin-bottom: 7rem;
+
+}
+
+.main__grid-collection {
+    grid-area: collection;
+}
+
+.main__grid-nav {
+    grid-area: grid-nav;
+}
+
+.main__grid-banner {
+    grid-area: grid-banner;
+}
+
+
+// section main__delivery
+.main__delivery {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+}

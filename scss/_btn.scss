@@ -1,0 +1,22 @@
+.btn {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $color-white;
+    background: $color-green;
+    border-radius: 5px;
+    padding: 1rem 1.8rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    &:hover {
+        transform: translateY(-.2rem);
+        box-shadow: rgba(0, 0, 0, 0.35) 1px 6px 18px;
+    }
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}

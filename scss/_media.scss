@@ -1,0 +1,167 @@
+// 960px
+@media (max-width: 960px) {
+    .header__bottom {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-gap: 1rem;
+    }
+
+    .input__group {
+        margin-left: 4rem;
+    }
+
+    // section main__delivery
+    .main__delivery {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, 10rem);
+        justify-content: space-evenly;
+
+    }
+}
+
+// 740px
+@media (max-width: 740px) {
+    .header__dropdown {
+        display: none;
+    }
+
+    .header__dropdown-icon {
+        display: block;
+    }
+
+    .form {
+        width: 25rem;
+    }
+
+    .form__button {
+        width: 4.5rem;
+    }
+
+    .form__search {
+        width: 10rem;
+    }
+
+    .dropbtn {
+
+        padding-left: .2rem;
+        width: 2rem;
+    }
+
+
+
+    // main__banner
+    .main__grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 6.7rem auto;
+        grid-template-areas:
+            "grid-nav"
+            "grid-banner"
+            "collection";
+        grid-gap: 1.2rem;
+
+    }
+
+    .main__banner-text p:nth-child(3) {
+        font-size: 1.6rem;
+    }
+
+    .main__banner-text h2 {
+        font-size: 2rem;
+        line-height: 2.7rem;
+    }
+
+    .main__banner-text p:first-child {
+        font-size: 1.6rem;
+    }
+
+    .main__dropdown {
+        width: 100%;
+        text-align: center;
+
+        &-content {
+            display: none;
+        }
+    }
+
+}
+
+
+
+
+// 520px
+@media (max-width: 520px) {
+    .header__bottom {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-gap: 1.5rem;
+        justify-content: center;
+
+    }
+
+    .main__navigation a {
+        font-size: 1.1em;
+    }
+
+    .main__line-bg {
+        height: 5.7rem;
+    }
+
+    // main__banner
+
+
+    .main__banner {
+        max-width: 29rem;
+        padding: 1rem 1rem;
+
+    }
+
+    .main__banner-cards {
+        display: none;
+    }
+
+    .main__banner-text p:first-child {
+        font-size: .9rem;
+        margin-bottom: 0.3rem;
+
+    }
+
+    .main__banner-text p:nth-child(3) {
+        font-size: 1.2rem;
+        margin-bottom: 1.3rem;
+        line-height: 1.5rem;
+    }
+
+    .main__banner-text h2 {
+        font-size: 1.8rem;
+        line-height: 1.9rem;
+        margin-bottom: 0.3rem;
+    }
+
+
+
+    .main__grid-collection {
+        text-align: center;
+    }
+
+    .main__dropdown {
+        height: 4rem;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        padding: .8rem 1.5rem;
+    }
+
+    // section main__delivery
+    .main__delivery {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(4, 10rem);
+
+
+    }
+
+}

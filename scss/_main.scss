@@ -1,0 +1,192 @@
+.main {
+    &__line-bg {
+        height: 6.7rem;
+
+        background: $color-main-bg;
+    }
+
+    &__dropdown {
+        width: 26rem;
+        height: 6.7rem;
+        display: inline-block;
+
+    }
+
+    &__dropbtn {
+        background: $color-green;
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        letter-spacing: 0.02em;
+        color: $color-white;
+        text-transform: uppercase;
+
+        & img {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__dropdown-content {
+        background-color: $color-lighGray;
+        width: 100%;
+
+        & a {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            letter-spacing: 0.02em;
+            color: $color-gray;
+            padding: 1.4rem 0 1.4rem 2.5rem;
+            display: block;
+            transition: all .2s ease;
+
+            &:not(:last-child) {
+                border-bottom: .1rem solid $color-main-bg;
+            }
+
+            &:hover {
+                background-color: $color-green
+            }
+
+            &:first-child:hover {
+                background-color: $color-lighBlue;
+            }
+
+        }
+    }
+
+
+
+    &__navigation {
+        display: flex;
+        justify-content: space-around;
+        background: $color-main-bg;
+        margin-top: 2rem;
+
+        & a {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            color: $color-gray;
+
+            &:hover {
+                color: $color-black;
+            }
+        }
+
+    }
+
+    // Banner
+
+    &__banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: .2rem;
+
+        padding: 5rem 3rem;
+        max-height: 39.1rem;
+        max-width: 90rem;
+        background: linear-gradient(103.4deg, rgba(241, 250, 255, 0.88) 0.89%, #F1FAFF 101.61%);
+
+        &__banner-img {
+            max-width: 37.4rem;
+
+        }
+
+        & img {
+            max-width: 100%;
+        }
+
+        &-text {
+            width: 35rem;
+        }
+
+        &-text p:first-child {
+            font-weight: 400;
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+            letter-spacing: 0.05em;
+            color: $color-green;
+            margin-bottom: 0.6rem;
+        }
+
+        &-text h2 {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 4rem;
+            line-height: 4.7rem;
+            margin-bottom: 2.9rem;
+        }
+
+        &-text p:nth-child(3) {
+            font-family: 'Mulish';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 2.7rem;
+            line-height: 2.6rem;
+            color: rgba(81, 81, 81, 0.70);
+            margin-bottom: 4.5rem;
+        }
+
+        // banner cards
+        &-cards {
+            text-align: center;
+            font-weight: 500;
+            font-size: .7rem;
+
+            &-item {
+                padding: .5rem 2.5rem;
+                background: $color-white;
+            }
+
+            &-item:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+
+            &-item p:nth-child(2) {
+                color: #7AC751;
+            }
+
+            &-item img {
+                max-width: 100%;
+            }
+
+            &-item p:nth-child(3) {
+                color: #555555;
+            }
+        }
+    }
+
+    //main__delivery
+    &__delivery {
+
+        &__cards {
+            display: flex;
+
+            &-img {
+                margin-right: 1.5rem;
+            }
+        }
+
+        & p:first-child {
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 2.6rem;
+        }
+
+        & p:last-child {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 2.6rem;
+            color: rgba(81, 81, 81, 0.70);
+        }
+    }
+
+}

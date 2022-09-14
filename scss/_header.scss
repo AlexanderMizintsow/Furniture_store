@@ -1,0 +1,239 @@
+.header {
+    &__bg {
+        background: $color-green;
+    }
+
+}
+
+.header__top {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    & p {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: $color-white;
+        display: inline-block;
+    }
+}
+
+.border-rectangle {
+    border: .1rem solid $color-white;
+    height: 2.1rem;
+    transform: translateY(25%);
+    margin: 0 2rem;
+}
+
+// Элемент выбора языка;
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    &:hover .dropdown-content {
+        display: block;
+    }
+}
+
+.dropbtn {
+    padding: .5rem;
+    cursor: pointer;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $color-lighGray;
+    width: 15rem;
+
+    & a:first-child {
+        background: url(../img/header/icon/icon-russia.png) no-repeat .5rem;
+    }
+
+    & a:last-child {
+        background: url(../img/header/icon/icon-united-kingdom.png) no-repeat .5rem;
+    }
+
+    & a {
+        font-size: 1.3rem;
+        color: $color-black;
+        padding: .2rem 0 .2rem 2.5rem;
+        display: block;
+        transition: all .2s ease;
+
+        &:not(:last-child) {
+            border-bottom: .1rem solid $color-main-bg;
+        }
+
+        &:hover {
+            background-color: $color-green
+        }
+    }
+}
+
+.dropbtn {
+    background: url(../img/header/icon/icon-united-kingdom.png) no-repeat left center;
+    padding-left: 2.5rem;
+    width: 12rem;
+
+    & p {
+        margin-right: 1.6rem;
+    }
+
+
+    &::after {
+        background: rgba(0, 0, 0, 0) url(../img/header/icon/arrow_down.png) no-repeat scroll center;
+        content: "";
+        height: 1.6rem;
+        position: absolute;
+        top: .7rem;
+        width: 1.6rem;
+    }
+}
+
+.header__dropdown-icon {
+    display: none;
+
+    & img {
+        width: 2rem;
+    }
+
+}
+
+//---
+
+//Вызов modal;
+.modalShow {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+// Header__bottom;
+
+.header__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+
+
+    & .header__bottom__icon {
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+        background: url(/img/header/icon/logo.png) 1rem no-repeat;
+        background-size: 2.8rem;
+        padding-left: 4.3rem;
+        color: $color-gray;
+        padding-top: .5rem;
+        transform: scale(1.3);
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+
+}
+
+.form {
+    outline: .2rem solid $color-green;
+    border-radius: .5rem;
+
+    &__search {
+        display: inline-block;
+        width: 30rem;
+        height: 4rem;
+        border: none;
+        outline: none;
+        border-right: .1rem solid $color-lighGray;
+        padding-left: 1rem;
+
+    }
+
+    & .dropbtn {
+        background: none;
+        padding-left: .5rem;
+        width: 9rem;
+        font-size: 1.4rem;
+
+        &::after {
+            background: rgba(0, 0, 0, 0) url(../img/header/icon/arrow_black.png) no-repeat scroll center;
+            content: "";
+            height: 1.9rem;
+            position: absolute;
+            right: 0rem;
+            top: .5rem;
+            width: 1.6rem;
+            margin-right: .5rem;
+        }
+    }
+
+    & a,
+    & a:last-child,
+    & a:first-child {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        background: url(/img/header/icon/logo.png) 1rem no-repeat;
+        background-size: 1.8rem;
+        padding-left: 4rem;
+        color: $color-gray;
+
+        &:not(:last-child) {
+            border-bottom: .1rem solid $color-main-bg;
+        }
+
+        &:hover {
+            background-color: $color-green
+        }
+    }
+
+    &__button {
+        width: 5.5rem;
+        height: 4.5rem;
+        border: none;
+        background: $color-green;
+        cursor: pointer;
+    }
+}
+
+.input__group {
+    transition: all .2s ease;
+
+    & a:hover img {
+        transform: translateY(-.3rem);
+
+    }
+
+    & a:active img {
+        transform: translateY(-.1rem);
+
+    }
+
+    & a:not(:last-child) {
+        margin-right: 3rem;
+    }
+}
+
+.bg {
+    background: gray;
+    opacity: .5;
+    width: 40rem;
+    height: 40rem;
+    opacity: 0;
+
+    .modals {
+        background: green;
+        width: 50%;
+        height: 50%;
+        opacity: none;
+    }
+
+}
