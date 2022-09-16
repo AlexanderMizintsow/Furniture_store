@@ -11,13 +11,22 @@
         margin-left: 4rem;
     }
 
-    // section main__delivery
-    .main__delivery {
+   // section main__collection
+    .main__collection {
         display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(2, 10rem);
-        justify-content: space-evenly;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "block-one block-one"
+            "block-two block-two"
+            "block-three block-three";
+        grid-gap: 1.5rem;
 
+        &__block-one {
+            width: 100%;
+            background-position: bottom;
+            height: 24.7rem;
+        }
     }
 }
 
@@ -153,15 +162,6 @@
     .btn {
         font-size: 1.1rem;
         padding: .8rem 1.5rem;
-    }
-
-    // section main__delivery
-    .main__delivery {
-        display: grid;
-        grid-template-columns: repeat(1, auto);
-        grid-template-rows: repeat(4, 10rem);
-
-
     }
 
 }

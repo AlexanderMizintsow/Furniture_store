@@ -131,7 +131,7 @@
             font-weight: 600;
             font-size: 2.7rem;
             line-height: 2.6rem;
-            color: rgba(81, 81, 81, 0.70);
+            color: $color-transparent-grey;
             margin-bottom: 4.5rem;
         }
 
@@ -164,14 +164,21 @@
         }
     }
 
-    //main__delivery
+    // section main__delivery
     &__delivery {
+        margin-bottom: 7rem;
+       
 
         &__cards {
             display: flex;
-
+            justify-content: center;
             &-img {
                 margin-right: 1.5rem;
+
+            }
+
+            &:hover {
+                transform: translateY(-.7rem);
             }
         }
 
@@ -185,8 +192,82 @@
             font-weight: 400;
             font-size: 1.4rem;
             line-height: 2.6rem;
-            color: rgba(81, 81, 81, 0.70);
+            color: $color-transparent-grey;
         }
     }
+
+    //section main__collection
+    &__collection {
+
+        &__block-one {
+            width: 61.7em;
+            height: 50.7rem;
+            background: url(../img/main/collection/collection_bg-1.jpg)center no-repeat;
+            background-size: cover;
+        }
+
+        &__block-two {
+            width: 100%;
+            height: 24.7rem;
+            background: url(../img/main/collection/collection_bg-2.jpg)center no-repeat;
+            background-size: cover;
+
+        }
+
+        &__block-three {
+            width: 100%;
+            height: 24.7rem;
+            background: url(../img/main/collection/collection_bg-3.jpg)center no-repeat;
+            background-size: cover;
+
+        }
+
+        & p,
+        h2 {
+            font-family: 'Mulish';
+            font-style: normal;
+            font-weight: 600;
+            line-height: 2.6rem;
+        }
+
+        & h2:first-child {
+            font-size: 2.2rem;
+            line-height: 2.8rem;
+            color: $color-gray;
+            margin: 4rem 0 1rem 2rem;
+        }
+
+        & p:nth-child(2) {
+            font-size: 2rem;
+            color: $color-green;
+            margin: 0 0 1rem 2rem;
+        }
+
+        & p:last-child {
+            font-weight: 400;
+            font-size: 1.6rem;
+            color: $color-transparent-grey;
+            margin-left: 2rem;
+            display: inline-block;
+            transition: all .4s ease;
+        }
+
+        & p:last-child:hover {
+            color: $color-lighPink;
+        }
+
+        &__group {
+            transition: all .2s ease;
+        }
+
+        &__group:hover {
+            transform: translateY(-.7rem);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+        }
+
+    }
+
+
+
 
 }
