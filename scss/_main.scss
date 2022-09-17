@@ -167,11 +167,12 @@
     // section main__delivery
     &__delivery {
         margin-bottom: 7rem;
-       
+
 
         &__cards {
             display: flex;
             justify-content: center;
+
             &-img {
                 margin-right: 1.5rem;
 
@@ -198,6 +199,7 @@
 
     //section main__collection
     &__collection {
+        margin-bottom: 12rem;
 
         &__block-one {
             width: 61.7em;
@@ -268,6 +270,8 @@
     }
 
 
-
+    // section main__trending
+   
+       
 
 }

@@ -11,7 +11,7 @@
         margin-left: 4rem;
     }
 
-   // section main__collection
+    // section main__collection
     .main__collection {
         display: grid;
         grid-template-columns: 1fr;
@@ -58,7 +58,9 @@
         width: 2rem;
     }
 
-
+    .hover-feature {
+        opacity: 1;
+    }
 
     // main__banner
     .main__grid {
@@ -163,5 +165,11 @@
         font-size: 1.1rem;
         padding: .8rem 1.5rem;
     }
+
+    .main__collection {
+        margin-bottom: 4rem;
+    }
+
+
 
 }
