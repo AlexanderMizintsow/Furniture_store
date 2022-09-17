@@ -3,25 +3,6 @@
         text-align: center;
         margin-bottom: 7rem;
 
-        &__categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
-            grid-template-rows: auto;
-            justify-content: center;
-            grid-gap: 1.5rem;
-
-        }
-
-        & h2 {
-            font-family: 'Mulish';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 3.6rem;
-            line-height: 4.5rem;
-            color: $color-gray;
-            margin-bottom: 4.5rem;
-        }
-
         & a {
             font-family: 'Mulish';
             font-style: normal;
@@ -172,5 +153,8 @@
                 margin-right: 2rem;
             }
         }
+
+        margin-bottom: 10rem;
     }
+
 }

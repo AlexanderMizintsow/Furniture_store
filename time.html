@@ -1,0 +1,233 @@
+<header class="header">
+    <div class="header__bg">
+        <div class="header__top container">
+            <p>Welcome to our online shop</p>
+
+            <!--Элемент выбора языка-->
+            <div class="header__dropdown">
+                <div class="dropdown">
+                    <div class="dropbtn">
+                        <p id="language">English (USD)</p>
+                    </div>
+
+                    <div class="dropdown-content">
+                        <a id="ru" href="#">RU</a>
+                        <a id="en" href="#">EN</a>
+                    </div>
+                </div>
+                <p class="border-rectangle"></p>
+                <button class="modalShow">
+                    <p>Login or Sign up</p>
+                </button>
+            </div>
+            <div class="header__dropdown-icon">
+                <div class="dropdown">
+                    <div class="dropbtn-icon">
+                        <img src="./img/header/icon/translation.png" alt="translation">
+                    </div>
+                    <div class="dropdown-content">
+                        <a id="ru" href="#">RU</a>
+                        <a id="en" href="#">EN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="header__bottom container">
+        <a class="header__bottom__icon" href="#">
+            <h1>Furniking</h1>
+        </a>
+        <form class="form">
+            <input type="search" class="form__search" placeholder="Search here">
+
+            <div class="dropdown">
+                <div class="dropbtn">
+                    Categories
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">Tables</a>
+                    <a href="#">Sofas</a>
+                    <a href="#">Chairs</a>
+                    <a href="#">Beds</a>
+                    <a href="#">Pillows</a>
+                    <a href="#">Children's furniture</a>
+                </div>
+            </div>
+            <button class="form__button"><img src="./img/header/icon/search_icon.png" alt=""></button>
+        </form>
+        <div class="input__group">
+            <a class="input__group-basket" href="#"><img src="./img/header/icon/basket.png" alt="basket"></a>
+            <a class="input__group-bell" href="#"><img src="./img/header/icon/bell.png" alt="bell"></a>
+            <a class="input__group-person modalShow" href="#"><img src="./img/header/icon/person.png"
+                    alt="person"></a>
+        </div>
+    </div>
+
+    <!--Модальное окно регистрации и входа-->
+    <div class="popup-fade">
+        <div class="modal">
+            <div class="modal__close"><img src="./img/header/icon/close.png" alt="close"></div>
+
+            <input type="checkbox" id="checked">
+            <div class="modal__signup">
+                <form>
+                    <label for="checked">Sign up</label>
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Password">
+                    <button class="modal__btn">Sign Up</button>
+                </form>
+            </div>
+
+            <div class="modal__login">
+                <form>
+                    <label for="checked">Login</label>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Password">
+                    <button class="modal__btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!--Main-->
+<div class="main">
+
+    <div class="main__line-bg">
+        <div class="container">
+            <div class="main__grid">
+                <div class="main__grid-collection">
+                    <div class="main__dropdown">
+                        <div class="main__dropbtn">
+                            <img src="../img/main/icon/icon-line-menu.png" alt="">
+                            ALL COLLECTIONS
+                        </div>
+                        <div class="main__dropdown-content">
+                            <a href="#">All</a>
+                            <a href="#">New Arrivals</a>
+                            <a href="#">Hot Sale</a>
+                            <a href="#">Furniture</a>
+                            <a href="#">Amrature</a>
+                            <a href="#">Tabble</a>
+                            <a href="#">Chair</a>
+                            <a href="#">Sofa</a>
+                            <a href="#">Mirrors</a>
+                            <a href="#">Stools</a>
+                            <a href="#">Benches</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__grid-nav">
+                    <div class="main__navigation">
+                        <a href="#">HOME</a>
+                        <a href="#">SHOP</a>
+                        <a href="#">BLOG</a>
+                        <a href="#">ABOUT</a>
+                        <a href="#">CONTACT US</a>
+                    </div>
+                </div>
+                <div class="main__grid-banner">
+                    <div class="main__banner">
+                        <div class="main__banner-text">
+                            <p>TOP COLLECTIONS 2022</p>
+                            <h2>We Serve Your
+                                Dream Furniture</h2>
+                            <p>Get 50% off all products</p>
+                            <button class="btn">SHOP NOW</button>
+                        </div>
+                        <div class="main__banner-img">
+                            <img src="./img/main/banner/furniture.png" alt="furniture">
+                        </div>
+                        <div class="main__banner-cards">
+                            <div class="main__banner-cards-item">
+                                <a href="#"><img src="./img/main/banner/armchair1.png" alt="armchair">
+                                    <p>$120</p>
+                                    <p>Office Desk Chair</p>
+                                </a>
+                            </div>
+                            <div class="main__banner-cards-item">
+                                <a href="#"> <img src="./img/main/banner/armchair2.png" alt="armchair">
+                                    <p>$180</p>
+                                    <p>Home Alisa Sofa</p>
+                                </a>
+                            </div>
+                            <div class="main__banner-cards-item">
+                                <a href="#"><img src="./img/main/banner/armchair3.png" alt="armchair">
+                                    <p>$250</p>
+                                    <p>Modern Chair</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--section main__delivery-->
+            <section class="main__delivery">
+                <div class="main__delivery__cards">
+                    <div class="main__delivery__cards-img">
+                        <img src="./img/main/delivery/free_delivery.png" alt="&#128666;">
+                    </div>
+                    <div class="main__delivery__cards-text">
+                        <p>Free Shipping</p>
+                        <p>Orders over $100</p>
+                    </div>
+                </div>
+                <div class="main__delivery__cards">
+                    <div class="main__delivery__cards-img">
+                        <img src="./img/main/delivery/shape.png" alt="&#127873;">
+                    </div>
+                    <div class="main__delivery__cards-text">
+                        <p>Smart Gift Card</p>
+                        <p>Buy $1000 to get card</p>
+                    </div>
+                </div>
+                <div class="main__delivery__cards">
+                    <div class="main__delivery__cards-img">
+                        <img src="./img/main/delivery/payment.png" alt="&#128091;">
+                    </div>
+                    <div class="main__delivery__cards-text">
+                        <p>Quick Payment</p>
+                        <p>100% secure payment</p>
+                    </div>
+                </div>
+                <div class="main__delivery__cards">
+                    <div class="main__delivery__cards-img">
+                        <img src="./img/main/delivery/headphones.png" alt="&#127911;">
+                    </div>
+                    <div class="main__delivery__cards-text">
+                        <p>24/7 Support</p>
+                        <p>Quick support</p>
+                    </div>
+                </div>
+
+            </section>
+            <!--section main__collection-->
+            <section class="main__collection">
+                <div class="main__collection__block-one main__collection__group">
+                    <h2>Modern Furniture Collections</h2>
+                    <p>Starting from $500</p>
+                    <a href="#">
+                        <p>Read more &#8594; </p>
+                    </a>
+                </div>
+                <div class="main__collection__block-two main__collection__group">
+
+                    <h2>Geometric Bookcase</h2>
+                    <p>Up to 20% discount</p>
+                    <a href="#">
+                        <p>Read more &#8594; </p>
+                    </a>
+                </div>
+                <div class="main__collection__block-three main__collection__group">
+                    <h2>Minimal Sofa collections </h2>
+                    <p>Sale upto 40% discount</p>
+                    <a href="#">
+                        <p>Read more &#8594; </p>
+                    </a>
+                </div>
+            </section>

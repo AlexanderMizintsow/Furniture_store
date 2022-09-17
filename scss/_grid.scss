@@ -65,4 +65,20 @@
         grid-area: block-three;
     }
 }
+// section main__trending
+.products__header__categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-gap: 1.5rem;
+}
 
+// section special-offer
+.special-offer__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    justify-content: space-between;
+}
