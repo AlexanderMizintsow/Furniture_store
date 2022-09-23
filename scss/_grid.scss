@@ -65,13 +65,14 @@
         grid-area: block-three;
     }
 }
+
 // section main__trending
 .products__header__categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
     grid-template-rows: auto;
     justify-content: center;
-    grid-gap: 1.5rem;
+    grid-gap: 3rem;
 }
 
 // section special-offer
@@ -79,6 +80,26 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-template-rows: auto;
-    grid-gap: 1.5rem;
+    grid-gap: 2rem;
     justify-content: space-between;
+}
+
+// products__cards
+.products__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(24.5rem, 4fr));
+    grid-template-rows: auto;
+    justify-items: center;
+    grid-gap: 2rem;
+    margin-bottom: 10rem;
+}
+
+// articles crads
+
+.articles__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 50rem));
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    justify-items: center;
 }

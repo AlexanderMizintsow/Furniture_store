@@ -103,9 +103,14 @@
             padding: 2rem !important;
         }
     }
+
+    // articles
+    .articles__cards__text {
+        top: 17rem;
+
+    }
+
 }
-
-
 
 // 520px
 @media (max-width: 520px) {
@@ -175,6 +180,20 @@
         margin-bottom: 4rem;
     }
 
+    // articles
+    .articles__cards__text {
+        top: 3rem;
 
+        p:nth-child(2) {
+            font-size: .9rem;
+        }
 
+        & p:nth-child(3) {
+            font-size: 2rem;
+        }
+    }
+
+    .articles__cards__text-tag {
+        padding: .5rem .3rem;
+    }
 }

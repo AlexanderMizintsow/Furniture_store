@@ -21,13 +21,6 @@
 
     // cards
     &__cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(24.5rem, 4fr));
-        grid-template-rows: auto;
-        justify-items: center;
-        grid-gap: 4rem;
-        margin-bottom: 10rem;
-
 
         &__body {
             width: 27rem;
