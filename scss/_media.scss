@@ -97,8 +97,13 @@
         }
     }
 
+    // reviews;
+    .reviews {
+        &__cards {
+            padding: 2rem !important;
+        }
+    }
 }
-
 
 
 

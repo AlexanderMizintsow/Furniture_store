@@ -6,6 +6,7 @@
     text-decoration: none;
     margin: 0;
     transition: all .1s ease;
+    box-sizing: border-box;
 }
 
 html {
@@ -16,7 +17,6 @@ html {
 body {
     font-family: 'Rubik', sans-serif;
     font-style: normal;
-    box-sizing: border-box;
     color: $color-gray;
     background: $color-white;
 

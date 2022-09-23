@@ -1,0 +1,91 @@
+.reviews {
+    position: relative;
+    text-align: center;
+    margin-bottom: 11rem;
+
+    &__nav {
+        & img {
+            position: absolute;
+            top: 60%;
+            z-index: 7;
+            cursor: pointer;
+
+        }
+
+        & img:first-child {
+            left: 0;
+            transition: all .3s ease;
+
+            &:hover {
+                transform: translateX(-10%);
+            }
+        }
+
+        & img:last-child {
+            right: 0;
+
+            &:hover {
+                transform: translateX(10%);
+            }
+        }
+    }
+
+
+    &__cards {
+        position: relative;
+        background: #F8FAFB;
+        margin: 0 auto;
+        max-width: 81rem;
+        max-height: 37rem;
+        padding: 8rem 12rem 5rem 12rem;
+
+        & p:nth-child(2) {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 150%;
+            letter-spacing: 0.005em;
+            color: $color-gray;
+            margin-bottom: 3rem;
+
+
+        }
+
+        & p:nth-child(3) {
+            font-family: 'Mulish';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 2.4rem;
+            line-height: 120%;
+            text-align: center;
+            letter-spacing: 0.005em;
+            color: $color-gray;
+            margin-bottom: .8rem;
+        }
+
+        & p:last-child {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 125%;
+            text-align: center;
+            letter-spacing: 0.005em;
+            color: $color-gray;
+
+        }
+    }
+
+    &__person {
+        position: absolute;
+        top: -15%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .3s ease;
+        &:hover {
+            filter: blur(.1rem);
+        }
+    }
+
+}

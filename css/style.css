@@ -144,6 +144,8 @@
   margin: 0;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -154,8 +156,6 @@ html {
 body {
   font-family: "Rubik", sans-serif;
   font-style: normal;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   color: #555;
   background: #fff;
 }
@@ -246,7 +246,6 @@ ul li a {
 .dropbtn {
   background: url(../img/header/icon/icon-united-kingdom.png) no-repeat left center;
   padding-left: 2.5rem;
-  width: 12rem;
 }
 .dropbtn p {
   margin-right: 1.6rem;
@@ -392,7 +391,46 @@ ul li a {
   font-size: 3.6rem;
   line-height: 4.5rem;
   color: #555;
-  margin-bottom: 4.5rem;
+  margin-bottom: 7.5rem;
+}
+
+.offer {
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  font-family: "Mulish";
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.offer::before {
+  content: "";
+  background-color: #00B7F1;
+  display: inline-block;
+  width: 6.4rem;
+  height: 2.3rem;
+  margin-bottom: -2.2rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.discount {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  font-family: "Mulish";
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+}
+.discount::before {
+  content: "";
+  background-color: #FF6868;
+  display: inline-block;
+  width: 4.4rem;
+  height: 2.1rem;
+  margin-bottom: -2.2rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .main__line-bg {
@@ -899,6 +937,10 @@ ul li a {
     display: none;
   }
 
+  .reviews__cards {
+    padding: 2rem !important;
+  }
+
   .main__grid-collection {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
@@ -1005,7 +1047,7 @@ ul li a {
   grid-template-rows: auto;
   justify-items: center;
   grid-gap: 4rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 .products__cards__body {
   width: 27rem;
@@ -1117,20 +1159,22 @@ ul li a {
 
 .special-offer {
   text-align: center;
+  margin-bottom: 12rem;
 }
 .special-offer__bg-one {
   background: url("/img/main/special_offer/living_room.jpg") right no-repeat;
-  background-size: auto;
+  background-size: cover;
 }
 .special-offer__bg-two {
   background: url("/img/main/special_offer/modern_chair.jpg") right no-repeat;
-  background-size: auto;
+  background-size: cover;
 }
 .special-offer__cards {
-  height: 21rem;
+  height: 22rem;
   padding: 2.8rem 1.4rem;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  position: relative;
 }
 .special-offer__cards:hover {
   -webkit-transform: translateY(-0.3rem);
@@ -1139,7 +1183,7 @@ ul li a {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .special-offer__text {
-  width: 26rem;
+  width: 25rem;
   font-family: "Mulish";
   font-style: normal;
   z-index: 7;
@@ -1200,4 +1244,84 @@ ul li a {
 }
 .special-offer__time-item:not(:last-child) {
   margin-right: 1.2rem;
+}
+
+.reviews {
+  position: relative;
+  text-align: center;
+  margin-bottom: 11rem;
+}
+.reviews__nav img {
+  position: absolute;
+  top: 60%;
+  z-index: 7;
+  cursor: pointer;
+}
+.reviews__nav img:first-child {
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.reviews__nav img:first-child:hover {
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+.reviews__nav img:last-child {
+  right: 0;
+}
+.reviews__nav img:last-child:hover {
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+}
+.reviews__cards {
+  position: relative;
+  background: #F8FAFB;
+  margin: 0 auto;
+  max-width: 81rem;
+  max-height: 37rem;
+  padding: 8rem 12rem 5rem 12rem;
+}
+.reviews__cards p:nth-child(2) {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  letter-spacing: 0.005em;
+  color: #555;
+  margin-bottom: 3rem;
+}
+.reviews__cards p:nth-child(3) {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+.reviews__cards p:last-child {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 125%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #555;
+}
+.reviews__person {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.reviews__person:hover {
+  -webkit-filter: blur(0.1rem);
+          filter: blur(0.1rem);
 }
