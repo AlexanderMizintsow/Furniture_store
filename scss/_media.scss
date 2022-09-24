@@ -196,4 +196,15 @@
     .articles__cards__text-tag {
         padding: .5rem .3rem;
     }
+
+    // footer
+    .footer__bottom {
+ 
+        & a {
+           display: block;
+           &:not(:last-child) {
+            margin-bottom: 1.2rem;
+           }
+        }
+    }
 }

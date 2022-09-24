@@ -125,20 +125,7 @@
     margin-bottom: 4rem;
 
 
-    & .header__bottom__icon {
-        font-size: 1.4rem;
-        line-height: 2.8rem;
-        background: url(/img/header/icon/logo.png) 1rem no-repeat;
-        background-size: 2.8rem;
-        padding-left: 4.3rem;
-        color: $color-gray;
-        padding-top: .5rem;
-        transform: scale(1.3);
-
-        &:hover {
-            color: $color-black;
-        }
-    }
+    
 
 }
 

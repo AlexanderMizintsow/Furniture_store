@@ -1,4 +1,5 @@
 .articles {
+    margin-bottom: 10rem;
 
     & h2 {
         text-align: center;
@@ -7,7 +8,7 @@
     &__cards {
         position: relative;
         max-width: 52rem;
-        max-height: 39.5rem;
+        max-height: 40.5rem;
         background-repeat: 0.2rem;
         transition: all .2s ease;
 
@@ -25,9 +26,23 @@
             padding: 0 4.4rem 3.4rem 4.4rem;
             max-height: 15rem;
 
+            & a {
+                display: inline-block;
+                font-family: 'DM Sans';
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 130%;
+                letter-spacing: 0.008em;
+                color: $color-white;
+
+                &:hover {
+                    color: $color-lighPink;
+                }
+            }
+
             & img {
                 transform: translateY(.1rem);
-            
+
             }
 
             & p:nth-child(2) {
@@ -49,13 +64,6 @@
                 margin-bottom: 3.7rem;
             }
 
-            & p:nth-child(4) {
-                font-family: 'DM Sans';
-                font-weight: 500;
-                font-size: 1.4rem;
-                line-height: 130%;
-                letter-spacing: 0.008em;
-            }
 
             &-tag {
                 background: $color-white;

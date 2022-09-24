@@ -1,0 +1,80 @@
+.footer {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+    
+
+    &__top {
+        margin-bottom: 10rem;
+    }
+
+    &__top__adress {
+        display: inline-block;
+
+        & a {
+            margin-bottom: 1.8rem;
+        }
+
+        & p {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 3.2rem;
+            margin: 1.8rem 0;
+        }
+
+        &-network {
+            & img:not(:last-child) {
+                margin-right: 3.5rem;
+            }
+
+            & img {
+                cursor: pointer;
+
+                &:hover {
+                    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%)
+                }
+            }
+
+        }
+    }
+
+    &__top__help,
+    &__top__store,
+    &__top__supports {
+        display: inline-block;
+
+        & a {
+            color: $color-gray;
+
+            &:hover {
+                color: $color-black;
+            }
+        }
+    }
+
+    &__bottom {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        color: $color-gray;
+        display: flex;
+        justify-content: space-between;
+
+        & p {
+            display: inline-block;
+        }
+
+        & a {
+            color: $color-gray;
+
+            &:hover {
+                color: $color-black;
+            }
+
+            &:not(:last-child) {
+                margin-right: 5rem;
+            }
+        }
+    }
+}

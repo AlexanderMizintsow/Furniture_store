@@ -4,14 +4,15 @@
 
 * {
     text-decoration: none;
-    margin: 0;
     transition: all .1s ease;
-    
+    margin: 0;
+    padding: 0;
 }
 
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     color: $color-gray;
     background: $color-white;
     box-sizing: border-box;
+    
 }
 
 ul li a {
@@ -31,3 +33,10 @@ ul li a {
     margin: 0 auto;
     padding: 0 3rem;
 }
+
+
+
+
+  
+
+ 

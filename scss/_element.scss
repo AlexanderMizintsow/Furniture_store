@@ -1,3 +1,29 @@
+// logo
+.logo__icon {
+    & img {
+        vertical-align: sub;
+        display: inline-block;
+        width: 2.5rem;
+        margin-right: 0.5rem;
+    }
+
+    & h2,
+    h1 {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        color: $color-gray;
+        transition: all .2s ease;
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+
+
+}
+
 // h2 all section
 .section-heading {
     font-family: 'Mulish';

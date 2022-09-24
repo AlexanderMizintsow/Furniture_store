@@ -1,4 +1,5 @@
 .main {
+
     &__line-bg {
         height: 6.7rem;
 
@@ -60,6 +61,9 @@
         }
     }
 
+    &__grid-nav {
+        background: $color-main-bg;
+    }
 
 
     &__navigation {
@@ -271,7 +275,7 @@
 
     // section main__trending
     // see the file _product__cadrs.scss
-   
+
     // section special-offer 
     // see the file special_offer
 }
