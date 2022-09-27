@@ -16,16 +16,42 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector(".dropbtn").style.background = 'url(../img/header/icon/icon-united-kingdom.png) no-repeat left center';
     }
 
-    // Вызов и закрытие модального окна;
+
+    // Модальное окно;
+    const modal = document.querySelector('.popup-fade')
     document.querySelectorAll('.modalShow').forEach((element) => {
         element.onclick = () => {
-            document.querySelector('.popup-fade').style.display = 'block'
+            modalOpen();
         }
     });
 
-    document.querySelector('.modal__close').onclick = () => {
-        document.querySelector('.popup-fade').style.display = 'none'
+    function modalOpen() {
+        modal.style.display = 'block'
+        clearInterval(modalTimeOpen)
+
     }
+
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    document.querySelector('.modal__close').onclick = () => {
+        closeModal();
+    }
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    })
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Escape' && modal.style.display == 'block') {
+            closeModal();
+        }
+    })
+
+
+    const modalTimeOpen = setTimeout(modalOpen, 3000);
 
 
     // All collection
@@ -101,3 +127,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 })
+
+
+// Модальное окно контактов
+
+// function showContactScroll() {
+//     if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+//         modalOpen();
+//         window.removeEventListener('scroll', showContactScroll);
+
+//     }
+// }
+// window.addEventListener('scroll', showContactScroll);
