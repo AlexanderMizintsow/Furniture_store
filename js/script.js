@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     // Модальное окно;
-    const modalTimeOpen = setTimeout(modalOpen, 2000);
+    const modalTimeOpen = setTimeout(modalOpen, 30000);
 
     const modal = document.querySelector('.popup-fade')
     document.querySelectorAll('.modalShow').forEach((element) => {
@@ -83,46 +83,36 @@ window.addEventListener('DOMContentLoaded', () => {
             `;
             form.append(statusMessage);
 
-            const request = new XMLHttpRequest();
-            request.open('POST', 'server.php');
-
-            request.setRequestHeader('Contant-type', 'aplication/json');
-            const obj = {};
             const formData = new FormData(form);
+
+            const obj = {};
             formData.forEach((value, key) => {
                 obj[key] = value;
             });
 
-            request.send(JSON.stringify(obj));
-
-            request.addEventListener('load', () => {
-                if (request.status === 200) {
-
+            fetch('server.php', {
+                method: 'POST',
+                headers: { 'Content-type': 'application/json' },
+                body: JSON.stringify(obj)
+            })
+                .then(data => data.text())
+                .then(() => {
                     if (form.classList.contains('login')) {
-                        form.reset();
                         showThanksModal(message.welcome);
-                        setTimeout(() => {
-                            statusMessage.remove();
-                            closeModal();
-                        }, 2000);
                     } else {
-                        form.reset();
                         showThanksModal(message.succes);
-                        setTimeout(() => {
-                            statusMessage.remove();
-                            closeModal();
-                        }, 2000);
                     }
-
-                } else {
+                })
+                .catch(() => {
                     showThanksModal(message.failure)
+                })
+                .finally(() => {
                     form.reset();
                     setTimeout(() => {
                         statusMessage.remove();
                         closeModal();
                     }, 2000);
-                }
-            })
+                })
         })
     }
 
