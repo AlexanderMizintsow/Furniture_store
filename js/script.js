@@ -18,6 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     // Модальное окно;
+    const modalTimeOpen = setTimeout(modalOpen, 2000);
+
     const modal = document.querySelector('.popup-fade')
     document.querySelectorAll('.modalShow').forEach((element) => {
         element.onclick = () => {
@@ -51,7 +53,98 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
 
-    // const modalTimeOpen = setTimeout(modalOpen, 3000);
+    // Форма регистрации и входа;
+
+    document.querySelectorAll('.registration').forEach(item => {
+        postData(item);
+    });
+
+    document.querySelectorAll('.login').forEach(item => {
+        postData(item);
+    });
+
+
+    const message = {
+        loading: 'img/header/spinner.svg',
+        succes: 'Thank you for registering!',
+        failure: 'An error has occurred, try again a little later!',
+        welcome: 'Welcome to the website'
+    }
+
+    function postData(form) {
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+
+            const statusMessage = document.createElement('img')
+            statusMessage.src = message.loading;
+            statusMessage.style.cssText = `
+            display: block;
+            margin: 0 auto;
+            `;
+            form.append(statusMessage);
+
+            const request = new XMLHttpRequest();
+            request.open('POST', 'server.php');
+
+            request.setRequestHeader('Contant-type', 'aplication/json');
+            const obj = {};
+            const formData = new FormData(form);
+            formData.forEach((value, key) => {
+                obj[key] = value;
+            });
+
+            request.send(JSON.stringify(obj));
+
+            request.addEventListener('load', () => {
+                if (request.status === 200) {
+
+                    if (form.classList.contains('login')) {
+                        form.reset();
+                        showThanksModal(message.welcome);
+                        setTimeout(() => {
+                            statusMessage.remove();
+                            closeModal();
+                        }, 2000);
+                    } else {
+                        form.reset();
+                        showThanksModal(message.succes);
+                        setTimeout(() => {
+                            statusMessage.remove();
+                            closeModal();
+                        }, 2000);
+                    }
+
+                } else {
+                    showThanksModal(message.failure)
+                    form.reset();
+                    setTimeout(() => {
+                        statusMessage.remove();
+                        closeModal();
+                    }, 2000);
+                }
+            })
+        })
+    }
+
+
+    function showThanksModal(mes) {
+        document.querySelector('.modal__signup').classList.add('hide');
+        document.querySelector('.modal__login',).classList.add('hide');
+        const thanksWindows = document.createElement('div');
+        thanksWindows.classList.add('modal__thanks');
+        thanksWindows.innerHTML = mes;
+        const thanksModal = document.querySelector('.modal');
+        thanksModal.append(thanksWindows);
+        thanksModal.style.height = '16rem';
+
+        setTimeout(() => {
+            thanksWindows.remove();
+            document.querySelector('.modal__signup').classList.remove('hide');
+            document.querySelector('.modal__login',).classList.remove('hide');
+            thanksModal.style.height = '45rem'
+        }, 2000)
+    }
+
 
 
     // All collection

@@ -131,4 +131,20 @@
         transform: scale(.5);
     }
 
+    .message {
+        position: absolute;
+        color: $color-white;
+        font-size: 1rem;
+        margin: 3rem 0 0 50%;
+        transform: translateX(-50%);
+    }
+
+    .modal__thanks {
+        position: absolute;
+        color: $color-white;
+        font-size: 1.5rem;
+        margin: 3rem 0 0 50%;
+        transform: translateX(-50%);
+    }
+
 }
