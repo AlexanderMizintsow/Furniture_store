@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
 
-    const modalTimeOpen = setTimeout(modalOpen, 3000);
+    // const modalTimeOpen = setTimeout(modalOpen, 3000);
 
 
     // All collection
@@ -124,9 +124,166 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    // Карточки
+
+
+    class Cards {
+        constructor(imgSticket, altSticket, imgBg, nameProduct, price, discount, imgRatings, altRatings, parentSelector) {
+            this.imgSticket = imgSticket;
+            this.altSticket = altSticket;
+            this.imgBg = imgBg;
+            this.nameProduct = nameProduct;
+            this.price = price;
+            this.discount = discount;
+            this.imgRatings = imgRatings;
+            this.altRatings = altRatings;
+            this.parent = document.querySelector(parentSelector);
+            this.makeDiscount();
+        }
+
+        makeDiscount() {
+            this.discount = this.price - ((this.price * this.discount) / 100);
+        }
+
+        render() {
+            const element = document.createElement('div');
+            element.classList.add('products__cards__body');
+            element.innerHTML = `
+            <!--New Cads-->
+           <!--img-->
+           <div class="products__cards__body-img">
+               <div class="hover-feature">
+                   <img src="./img/main/icon/favourite.png" alt="favourite">
+                   <img src="./img/main/icon/shop.png" alt="shop">
+                   <img src="./img/main/icon/compare.png" alt="compare">
+                   <img src="./img/main/icon/view.png" alt="view">
+               </div>
+               <img src= ${this.imgSticket} alt=${this.altSticket} class="sticket-left">
+               <a href="#"><img src=${this.imgBg}
+                       alt=${this.nameProduct}></a>
+           </div>
+           <!--text-->
+           <div class="products__cards__body-text">
+               <p>Chair</p>
+               <p>${this.nameProduct}</p>
+               <p>$${this.discount}</p>
+               <p>$${this.price}</p>
+               <img class="ratings" src=${this.imgRatings} alt=${this.altRatings}>
+       </div>
+       `;
+            this.parent.append(element);
+        }
+    }
+
+
+
+    new Cards(
+        "./img/main/icon/sticket_sale.png",
+        "sale",
+        "./img/main/our_products/wood_coffee_tables.jpg",
+        'Minimal LCD chair',
+        '250',
+        '30',
+        "./img/main/icon/ratings-5.png",
+        "ratings-5",
+        '.our'
+    ).render();
+
+    new Cards(
+        "./img/main/icon/sticket_new.png",
+        "New",
+        "./img/main/our_products/modern_sofa.jpg",
+        'Modern Sofa',
+        '150',
+        '20',
+        "./img/main/icon/ratings-4.png",
+        "ratings-4",
+        '.our'
+    ).render();
+    new Cards(
+        "./img/main/icon/sticket_discount.png",
+        "discount",
+        "./img/main/our_products/microfiber_sofa.jpg",
+        'Microfiber Sofa',
+        '130',
+        '30',
+        "./img/main/icon/ratings-4.png",
+        "ratings-4",
+        '.our'
+    ).render();
+    new Cards(
+        "./img/main/icon/sticket_sale.png",
+        "sale",
+        "./img/main/our_products/wood_coffee_tables.jpg",
+        'Wood Coffee Tables',
+        '120',
+        '20',
+        "./img/main/icon/ratings-5.png",
+        "ratings-5",
+        '.our'
+    ).render();
+    new Cards(
+        "./img/main/icon/sticket_discount.png",
+        "discount",
+        "./img/main/our_products/acacia_wood_club_chairs.png",
+        'Acacia Wood Club Chairs',
+        '120',
+        '20',
+        "./img/main/icon/ratings-4.png",
+        "ratings-4",
+        '.our'
+    ).render();
+    new Cards(
+        "./img/main/icon/sticket_sale.png",
+        "sale",
+        "./img/main/our_products/amalia_cowhide_bench.png",
+        'Amalia Cowhide Bench',
+        '150',
+        '20',
+        "./img/main/icon/ratings-4.png",
+        "ratings-4",
+        '.our'
+    ).render();
+    new Cards(
+        "./img/main/icon/sticket_new.png",
+        "new",
+        "./img/main/our_products/juno_hinged_li_sdtorage.png",
+        'Juno-Hinged Lid Storage',
+        '250',
+        '30',
+        "./img/main/icon/ratings-5.png",
+        "ratings-5",
+        '.our'
+    ).render();
+    new Cards(
+        "./img/main/icon/sticket_new.png",
+        "new",
+        "./img/main/our_products/deli_pciaiece_living.jpg",
+        'Delicia 3 Piece Living Room',
+        '150',
+        '20',
+        "./img/main/icon/ratings-4.png",
+        "ratings-4",
+        '.our'
+    ).render();
+
+
 
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Модальное окно контактов
