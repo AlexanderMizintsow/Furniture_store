@@ -84,3 +84,33 @@
 .hide {
     display: none;
 }
+
+// dot
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 7;
+    display: flex;
+    justify-content: center;
+    margin: 0 15%;
+    list-style: none;
+
+}
+
+.dot {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 3rem;
+    height: 0.6rem;
+    margin: 0 .3rem;
+    cursor: pointer;
+    background: $color-lighBlue;
+    background-clip: padding-box;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}

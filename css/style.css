@@ -461,6 +461,41 @@ ul li a {
   display: none;
 }
 
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 15%;
+  list-style: none;
+}
+
+.dot {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  width: 3rem;
+  height: 0.6rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  background: #00B7F1;
+  background-clip: padding-box;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+}
+
 .main__line-bg {
   height: 6.7rem;
   background: #F7F8FA;
@@ -1081,10 +1116,22 @@ body {
   position: relative;
   text-align: center;
   margin-bottom: 11rem;
+  height: 47rem;
+}
+.reviews__slides-wrapper {
+  padding-top: 5rem;
+  overflow: hidden;
+}
+.reviews__slides-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .reviews__nav img {
   position: absolute;
-  top: 60%;
+  top: 65%;
   z-index: 7;
   cursor: pointer;
 }
@@ -1111,6 +1158,7 @@ body {
   max-width: 81rem;
   max-height: 37rem;
   padding: 8rem 12rem 5rem 12rem;
+  margin-bottom: 1rem;
 }
 .reviews__cards p:nth-child(2) {
   font-family: "DM Sans";
@@ -1120,7 +1168,7 @@ body {
   line-height: 150%;
   letter-spacing: 0.005em;
   color: #555;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
 .reviews__cards p:nth-child(3) {
   font-family: "Mulish";
@@ -1133,7 +1181,7 @@ body {
   color: #555;
   margin-bottom: 0.8rem;
 }
-.reviews__cards p:last-child {
+.reviews__cards p:nth-child(4) {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
@@ -1142,6 +1190,12 @@ body {
   text-align: center;
   letter-spacing: 0.005em;
   color: #555;
+}
+.reviews #current {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
 }
 .reviews__person {
   position: absolute;

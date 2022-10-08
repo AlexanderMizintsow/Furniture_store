@@ -1,5 +1,4 @@
-// 24 часа
-//main__dropbtn
+
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -206,10 +205,120 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Слайды
+    const slides = document.querySelectorAll('.reviews__cards'),
+        slider = document.querySelector('.reviews'),
+        back = document.querySelector('#back'),
+        next = document.querySelector('#next'),
+        current = document.querySelector('#current'),
+        total = document.querySelector('#total'),
+        slidesWrapper = document.querySelector('.reviews__slides-wrapper'),
+        slidesInner = document.querySelector('.reviews__slides-inner'),
+        width = window.getComputedStyle(slidesWrapper).width;
+
+    let slidesIndex = 1;
+    let offset = 0;
+    const dots = [];
+
+    counterSlides(slidesIndex);
+    slides.length < 10 ? total.innerHTML = `0${slides.length}`
+        : total.innerHTML = slides.length;
+
+    slidesInner.style.width = 100 * slides.length + '%';
+    slides.forEach(items => items.style.width = width);
+
+    drawDots();
+
+    next.addEventListener('click', () => {
+
+        if (offset == deleteNotDigits(width) * (slides.length - 1)) {
+            offset = 0;
+        } else {
+            offset += deleteNotDigits(width);
+        }
+
+        slidesTransform();
+        counterSlides(++slidesIndex);
+        installOpacity();
+    })
+
+    back.addEventListener('click', () => {
+
+        if (offset == 0) {
+            offset = deleteNotDigits(width) * (slides.length - 1);
+        } else {
+            offset -= deleteNotDigits(width);
+        }
+
+        slidesTransform();
+        counterSlides(--slidesIndex);
+        installOpacity();
+    })
+
+    dots.forEach(item => {
+        item.addEventListener('click', e => {
+            const slideTo = e.target.getAttribute('data-slide-to');
+
+            slidesIndex = slideTo;
+            offset = deleteNotDigits(width) * (slideTo - 1);
+
+            slidesTransform();
+
+            slides.length < 10 ? current.innerHTML = `0${slidesIndex}`
+                : current.innerHTML = slidesIndex;
+
+            installOpacity();
+        })
+    })
+
+    function slidesTransform() {
+        slidesInner.style.transform = `translateX(-${offset / 10}rem)`;
+    }
+
+    function installOpacity() {
+        dots.forEach(item => item.style.opacity = '.5');
+        dots[slidesIndex - 1].style.opacity = 1;
+    }
+
+    function deleteNotDigits(str) {
+        return +str.replace(/\D/g, '');
+    }
+
+    function counterSlides(i) {
+        if (i > slides.length) {
+            slidesIndex = 1;
+        } else if (i < 1) {
+            slidesIndex = slides.length;
+        }
+
+        slides.length < 10 ? current.innerHTML = `0${slidesIndex}`
+            : current.innerHTML = slidesIndex;
+
+    }
+
+    function drawDots() {
+
+        const indicators = document.createElement('ol');
+
+        indicators.classList.add('carousel-indicators');
+        slider.append(indicators);
+
+        for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement('li');
+            dot.setAttribute('data-slide-to', i + 1);
+            dot.classList.add('dot');
+
+            if (i == 0) {
+                dot.style.opacity = 1;
+            }
+
+            indicators.append(dot);
+            dots.push(dot);
+        }
+    }
+
 
     // Карточки
-
-
     class Cards {
         constructor(imgSticket, altSticket, imgBg, nameProduct, price, discount, imgRatings, altRatings, parentSelector) {
             this.imgSticket = imgSticket;

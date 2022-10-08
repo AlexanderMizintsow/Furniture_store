@@ -2,11 +2,25 @@
     position: relative;
     text-align: center;
     margin-bottom: 11rem;
+    height: 47rem;
+
+    &__slides-wrapper {
+        padding-top: 5rem;
+        overflow: hidden;
+ 
+    }
+
+
+
+    &__slides-inner {
+        display: flex;
+        transition: all .5s ease;
+    }
 
     &__nav {
         & img {
             position: absolute;
-            top: 60%;
+            top: 65%;
             z-index: 7;
             cursor: pointer;
 
@@ -38,6 +52,7 @@
         max-width: 81rem;
         max-height: 37rem;
         padding: 8rem 12rem 5rem 12rem;
+        margin-bottom: 1rem;
 
         & p:nth-child(2) {
             font-family: 'DM Sans';
@@ -47,7 +62,7 @@
             line-height: 150%;
             letter-spacing: 0.005em;
             color: $color-gray;
-            margin-bottom: 3rem;
+            margin: 3rem 0;
 
 
         }
@@ -64,7 +79,7 @@
             margin-bottom: .8rem;
         }
 
-        & p:last-child {
+        & p:nth-child(4) {
             font-family: 'Rubik';
             font-style: normal;
             font-weight: 400;
@@ -77,12 +92,22 @@
         }
     }
 
+    #current {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+    }
+
     &__person {
         position: absolute;
         top: -15%;
         left: 50%;
         transform: translateX(-50%);
         transition: all .3s ease;
+
+
+
         &:hover {
             filter: blur(.1rem);
         }

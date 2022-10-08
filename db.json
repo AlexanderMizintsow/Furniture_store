@@ -1,0 +1,87 @@
+{
+  "menu": [
+    {
+      "imgSticket": "./img/main/icon/sticket_sale.png",
+      "altSticket": "sale",
+      "imgBg": "./img/main/our_products/wood_coffee_tables.jpg",
+      "nameProduct": "Minimal LCD chair",
+      "price": 250,
+      "discount": 30,
+      "imgRatings": "./img/main/icon/ratings-5.png",
+      "altRatings": "ratings-5"
+    },
+    {
+      "imgSticket": "./img/main/icon/sticket_new.png",
+      "altSticket": "New",
+      "imgBg": "./img/main/our_products/modern_sofa.jpg",
+      "nameProduct": "Modern Sofa",
+      "price": 150,
+      "discount": 20,
+      "imgRatings": "./img/main/icon/ratings-4.png",
+      "altRatings": "ratings-4"
+    },
+    {
+      "imgSticket": "./img/main/icon/sticket_discount.png",
+      "altSticket": "discount",
+      "imgBg": "./img/main/our_products/microfiber_sofa.jpg",
+      "nameProduct": "Microfiber Sofa",
+      "price": 130,
+      "discount": 30,
+      "imgRatings": "./img/main/icon/ratings-4.png",
+      "altRatings": "ratings-4"
+    },
+    {
+      "imgSticket": "./img/main/icon/sticket_sale.png",
+      "altSticket": "sale",
+      "imgBg": "./img/main/our_products/wood_coffee_tables.jpg",
+      "nameProduct": "Wood Coffee Tables",
+      "price": 120,
+      "discount": 20,
+      "imgRatings": "./img/main/icon/ratings-5.png",
+      "altRatings": "ratings-5"
+    },
+    {
+      "imgSticket": "./img/main/icon/sticket_discount.png",
+      "altSticket": "discount",
+      "imgBg": "./img/main/our_products/acacia_wood_club_chairs.png",
+      "nameProduct": "Acacia Wood Club Chairs",
+      "price": 120,
+      "discount": 20,
+      "imgRatings": "./img/main/icon/ratings-4.png",
+      "altRatings": "ratings-4"
+    },
+    {
+      "imgSticket": "./img/main/icon/sticket_sale.png",
+      "altSticket": "sale",
+      "imgBg": "./img/main/our_products/amalia_cowhide_bench.png",
+      "nameProduct": "Amalia Cowhide Bench",
+      "price": 150,
+      "discount": 20,
+      "imgRatings": "./img/main/icon/ratings-4.png",
+      "altRatings": "ratings-4"
+    },
+    {
+      "imgSticket": "./img/main/icon/sticket_new.png",
+      "altSticket": "new",
+      "imgBg": "./img/main/our_products/juno_hinged_li_sdtorage.png",
+      "nameProduct": "Juno-Hinged Lid Storage",
+      "price": 250,
+      "discount": 30,
+      "imgRatings": "./img/main/icon/ratings-5.png",
+      "altRatings": "ratings-5"
+    },
+    {
+      "imgSticket": "./img/main/icon/sticket_new.png",
+      "altSticket": "new",
+      "imgBg": "./img/main/our_products/deli_pciaiece_living.jpg",
+      "nameProduct": "Delicia 3 Piece Living Room",
+      "price": 150,
+      "discount": 20,
+      "imgRatings": "./img/main/icon/ratings-5.png",
+      "altRatings": "ratings-5"
+    }
+  ],
+  "requests": [
+
+  ]
+}
