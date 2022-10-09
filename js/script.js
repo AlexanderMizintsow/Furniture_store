@@ -320,7 +320,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Карточки
     class Cards {
-        constructor(imgSticket, altSticket, imgBg, nameProduct, price, discount, imgRatings, altRatings, parentSelector) {
+        constructor(imgSticket, altSticket, imgBg, nameProduct, price, discount, imgRatings, altRatings, group, parentSelector) {
             this.imgSticket = imgSticket;
             this.altSticket = altSticket;
             this.imgBg = imgBg;
@@ -329,6 +329,7 @@ window.addEventListener('DOMContentLoaded', () => {
             this.discount = discount;
             this.imgRatings = imgRatings;
             this.altRatings = altRatings;
+            this.group = group;
             this.parent = document.querySelector(parentSelector);
             this.makeDiscount();
         }
@@ -339,11 +340,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         render() {
             const element = document.createElement('div');
-            element.classList.add('products__cards__body');
+            element.classList.add(`products__cards__body-${this.group}`);
             element.innerHTML = `
-            <!--New Cads-->
-           <!--img-->
-           <div class="products__cards__body-img">
+           <div class="products__cards__body-img fade">
                <div class="hover-feature">
                    <img src="./img/main/icon/favourite.png" alt="favourite">
                    <img src="./img/main/icon/shop.png" alt="shop">
@@ -354,21 +353,167 @@ window.addEventListener('DOMContentLoaded', () => {
                <a href="#"><img src=${this.imgBg}
                        alt=${this.nameProduct}></a>
            </div>
-           <!--text-->
            <div class="products__cards__body-text">
                <p>Chair</p>
                <p>${this.nameProduct}</p>
                <p>$${this.discount}</p>
                <p>$${this.price}</p>
                <img class="ratings" src=${this.imgRatings} alt=${this.altRatings}>
-       </div>
-       `;
+       </div>`;
             this.parent.append(element);
         }
+
     }
 
+    const categoriesCards = document.querySelectorAll('.products__header__categories');
+    categoriesCards.forEach(item => {
+
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            // активное заглавие;
+            document.querySelectorAll('.active-green').forEach(green => green.classList.remove('active-green'))
+            e.target.classList.add('active-green');
+
+            // перебор карточек Our products;;
+            if (e.target.classList.contains("our-best")) {
+                throughCards('.products__cards__body-our-new', '.products__cards__body-our-todays', '.products__cards__body-our-best');
+            }
+            else if (e.target.classList.contains('our-new')) {
+                throughCards('.products__cards__body-our-best', '.products__cards__body-our-todays', '.products__cards__body-our-new');
+            }
+            else if (e.target.classList.contains('our-todays')) {
+                throughCards('.products__cards__body-our-best', '.products__cards__body-our-new', '.products__cards__body-our-todays');
+            }
+            else if (e.target.classList.contains('our-all')) {
+                document.querySelectorAll('.hide').forEach(i => i.classList.remove('hide'));
+            }
+            // перебор карточек  trand
+            if (e.target.classList.contains("trending-top")) {
+                throughCards('.products__cards__body-trending-new', '.products__cards__body-trending-new', '.products__cards__body-trending-top');
+            }
+            else if (e.target.classList.contains('trending-new')) {
+                throughCards('.products__cards__body-trending-best', '.products__cards__body-trending-top', '.products__cards__body-trending-new');
+            }
+            else if (e.target.classList.contains('trending-best')) {
+                throughCards('.products__cards__body-trending-top', '.products__cards__body-trending-new', '.products__cards__body-trending-best');
+            }
 
 
+            function throughCards(hide1, hide2, show) {
+                document.querySelectorAll(hide1).forEach(i => i.classList.add('hide'));
+                document.querySelectorAll(hide2).forEach(i => i.classList.add('hide'));
+
+                document.querySelectorAll(show).forEach(i => i.classList.remove('hide'));
+            }
+        })
+    })
+
+    // *PRODUCTS trands
+    new Cards(
+        "./img/main/icon/sticket_new.png",
+        "New",
+        "./img/main/trending/minimal_lcd_chair.jpg",
+        "Minimal LCD chair",
+        "250",
+        "30",
+        "./img/main/icon/ratings-5.png",
+        "ratings-5",
+        "trending-new",
+        ".trending"
+    ).render();
+
+    new Cards(
+        "./img/main/icon/sticket_new.png",
+        "New",
+        "./img/main/trending/minimal_iconic_chair.jpg",
+        "Minimal iconic chair",
+        "150",
+        "20",
+        "./img/main/icon/ratings-4.png",
+        "ratings-4",
+        "trending-new",
+        ".trending"
+    ).render();
+
+    new Cards(
+        "./img/main/icon/sticket_sale.png",
+        "sale",
+        "./img/main/trending/dining_chairs.jpg",
+        "Dining chairs",
+        "120",
+        "20",
+        "./img/main/icon/ratings-5.png",
+        "ratings-5",
+        "trending-top",
+        ".trending"
+    ).render();
+
+    new Cards(
+        "./img/main/icon/sticket_sale.png",
+        "sale",
+        "./img/main/trending/buskbo_armchair.jpg",
+        "Buskbo armchair",
+        "150",
+        "30",
+        "./img/main/icon/ratings-4.png",
+        "ratings-4",
+        "trending-best",
+        ".trending"
+    ).render();
+
+    new Cards(
+        "./img/main/icon/sticket_sale.png",
+        "sale",
+        "./img/main/trending/modern_chairs.jpg",
+        "Modern chairs",
+        "120",
+        "30",
+        "./img/main/icon/ratings-4.png",
+        "ratings-4",
+        "trending-best",
+        ".trending"
+    ).render();
+
+    new Cards(
+        "./img/main/icon/sticket_sale.png",
+        "sale",
+        "./img/main/trending/plastic_dining_chair.jpg",
+        "Plastic dining chair",
+        "130",
+        "20",
+        "./img/main/icon/ratings-4.png",
+        "ratings-4",
+        "trending-best",
+        ".trending"
+    ).render();
+
+    new Cards(
+        "./img/main/icon/sticket_new.png",
+        "new",
+        "./img/main/trending/minimal_Wood_chair.jpg",
+        "Minimal Wood chair",
+        "250",
+        "30",
+        "./img/main/icon/ratings-5.png",
+        "ratings-5",
+        "trending-top",
+        ".trending"
+    ).render();
+
+    new Cards(
+        "./img/main/icon/sticket_new.png",
+        "new",
+        "./img/main/trending/elegent_wood_chair.jpg",
+        "Elegent wood chair",
+        "150",
+        "20",
+        "./img/main/icon/ratings-4.png",
+        "ratings-4",
+        "trending-new",
+        ".trending"
+    ).render();
+
+    // *OUR PRODUCTS*
     new Cards(
         "./img/main/icon/sticket_sale.png",
         "sale",
@@ -378,6 +523,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '30',
         "./img/main/icon/ratings-5.png",
         "ratings-5",
+        "our-best",
         '.our'
     ).render();
 
@@ -390,6 +536,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '20',
         "./img/main/icon/ratings-4.png",
         "ratings-4",
+        "our-new",
         '.our'
     ).render();
     new Cards(
@@ -401,6 +548,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '30',
         "./img/main/icon/ratings-4.png",
         "ratings-4",
+        "our-todays",
         '.our'
     ).render();
     new Cards(
@@ -412,6 +560,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '20',
         "./img/main/icon/ratings-5.png",
         "ratings-5",
+        "our-best",
         '.our'
     ).render();
     new Cards(
@@ -423,6 +572,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '20',
         "./img/main/icon/ratings-4.png",
         "ratings-4",
+        "our-todays",
         '.our'
     ).render();
     new Cards(
@@ -434,8 +584,9 @@ window.addEventListener('DOMContentLoaded', () => {
         '20',
         "./img/main/icon/ratings-4.png",
         "ratings-4",
+        "our-best",
         '.our'
-    ).render();
+    ).render()
     new Cards(
         "./img/main/icon/sticket_new.png",
         "new",
@@ -445,8 +596,9 @@ window.addEventListener('DOMContentLoaded', () => {
         '30',
         "./img/main/icon/ratings-5.png",
         "ratings-5",
+        "our-new",
         '.our'
-    ).render();
+    ).render()
     new Cards(
         "./img/main/icon/sticket_new.png",
         "new",
@@ -456,12 +608,11 @@ window.addEventListener('DOMContentLoaded', () => {
         '20',
         "./img/main/icon/ratings-4.png",
         "ratings-4",
+        "our-new",
         '.our'
     ).render();
 
-
-
-
+   
 })
 
 
